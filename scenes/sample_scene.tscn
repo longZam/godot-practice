@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbo604wrdwb6o"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ci2tx"]
+
+[sub_resource type="Sky" id="Sky_kmlqo"]
+sky_material = SubResource("ProceduralSkyMaterial_ci2tx")
+
+[sub_resource type="Environment" id="Environment_p1odr"]
+background_mode = 2
+sky = SubResource("Sky_kmlqo")
+ambient_light_source = 3
+reflected_light_source = 2
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+glow_enabled = true
+glow_blend_mode = 0
+
+[node name="sample_scene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_p1odr")
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="Static Lights" type="Node" parent="."]
+
+[node name="Sun" type="DirectionalLight3D" parent="Static Lights"]
+transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, 0, 0, 0)
+light_bake_mode = 1
