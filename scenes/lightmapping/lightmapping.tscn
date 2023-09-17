@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://doapojqntkn5n"]
 
-[ext_resource type="LightmapGIData" uid="uid://c6u2mccmevqys" path="res://scenes/lightmapping/baked-lightmap/low/lightmapping_low.lmbake" id="1_7mbn5"]
+[ext_resource type="LightmapGIData" uid="uid://b0p1p4k6bqhf1" path="res://scenes/lightmapping/baked-lightmap/lightmap.lmbake" id="1_g4khk"]
 [ext_resource type="PackedScene" uid="uid://cnar37f6qhysk" path="res://scenes/lightmapping/zdm2.tscn" id="2_836a6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fg81b"]
@@ -32,8 +32,9 @@ add_uv2 = true
 environment = SubResource("Environment_ql3nt")
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
-quality = 0
-light_data = ExtResource("1_7mbn5")
+quality = 2
+max_texture_size = 4096
+light_data = ExtResource("1_g4khk")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.89449, 0.447088, 0, -0.447088, 0.89449, 0, 1.67445, 6.38435)
