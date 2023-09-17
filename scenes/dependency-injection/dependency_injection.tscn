@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr7p771q6dyss"]
+
+[ext_resource type="Script" path="res://scenes/dependency-injection/src/StringProvider.cs" id="1_lq0n5"]
+[ext_resource type="Script" path="res://scenes/dependency-injection/src/StringDependent.cs" id="2_erab7"]
+[ext_resource type="Script" path="res://scenes/dependency-injection/src/IntProvider.cs" id="2_uuwam"]
+[ext_resource type="Script" path="res://scenes/dependency-injection/src/StringIntDependent.cs" id="4_isnmp"]
+
+[node name="dependency_injection" type="Node3D"]
+
+[node name="StringProvider" type="Node" parent="."]
+script = ExtResource("1_lq0n5")
+dependency = "Hello!"
+
+[node name="IntProvider" type="Node" parent="StringProvider"]
+script = ExtResource("2_uuwam")
+dependency = 123
+
+[node name="StrInt" type="Node" parent="StringProvider/IntProvider"]
+script = ExtResource("4_isnmp")
+
+[node name="Str" type="Node" parent="StringProvider/IntProvider"]
+script = ExtResource("2_erab7")
+
+[node name="StringProvider2" type="Node" parent="."]
+script = ExtResource("1_lq0n5")
+dependency = "World!"
+
+[node name="IntProvider" type="Node" parent="StringProvider2"]
+script = ExtResource("2_uuwam")
+dependency = 456
+
+[node name="StrInt" type="Node" parent="StringProvider2/IntProvider"]
+script = ExtResource("4_isnmp")
+
+[node name="Str" type="Node" parent="StringProvider2/IntProvider"]
+script = ExtResource("2_erab7")

@@ -12,7 +12,7 @@ public static class NodeExtensions
     /// <param name="node">탐색 시작점 노드</param>
     /// <param name="result">탐색 결과 노드</param>
     /// <returns>탐색 성공 여부</returns>
-    public static bool TryGetChildWithType<T>(this Node node, out T result)
+    public static bool TryGetChildWithType<T>(this Node node, out T? result)
         where T : Node
     {
         var children = node.GetChildren();
