@@ -2,9 +2,13 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
+    <nullable>enable</nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Chickensoft.SuperNodes" Version="1.2.0" PrivateAssets="all" OutputItemType="analyzer" />
+    <PackageReference Include="Chickensoft.SuperNodes.Types" Version="1.2.0" />
+    <PackageReference Include="Chickensoft.AutoInject" Version="1.0.0" PrivateAssets="all" />
     <PackageReference Include="FixedMath.NET" Version="1.0.1" />
   </ItemGroup>
 </Project>
