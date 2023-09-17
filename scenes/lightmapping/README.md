@@ -11,7 +11,7 @@
     * Mesh -> Add UV2 = true
     * Material -> Emission -> Enabled = true
     * Material -> Emission -> Color = White
-    & Material -> Emission -> Energy Multiplier = 3 ~ 10
+    * Material -> Emission -> Energy Multiplier = 3 ~ 10
 
 * 라이트맵을 적용시킬 MeshInstance의 설정을 다음과 같이 세팅합니다.
     * Mesh 우클릭 -> Make Unique
