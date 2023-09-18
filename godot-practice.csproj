@@ -6,5 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="FixedMath.NET" Version="1.0.1" />
+    <PackageReference Include="Godot.DependencyInjection" Version="0.2.3" />
   </ItemGroup>
 </Project>
