@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://u3n8bhfy4mmv"]
+
+[ext_resource type="Script" path="res://scenes/dependency-injection/src/DependencyInstallerNode.cs" id="2_ksi10"]
+[ext_resource type="Script" path="res://scenes/dependency-injection/src/Service.cs" id="3_iqyag"]
+[ext_resource type="Script" path="res://scenes/dependency-injection/src/Dependent.cs" id="4_mwsxi"]
+
+[node name="godot_di_example" type="Node3D"]
+
+[node name="Installer" type="Node" parent="." node_paths=PackedStringArray("service")]
+script = ExtResource("2_ksi10")
+service = NodePath("Service")
+
+[node name="Service" type="Node" parent="Installer"]
+script = ExtResource("3_iqyag")
+
+[node name="Dependent" type="Node" parent="."]
+script = ExtResource("4_mwsxi")
