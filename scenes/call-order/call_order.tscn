@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://du7rdld34lpxi"]
+
+[ext_resource type="Script" path="res://scenes/call-order/src/CallMessage.cs" id="1_1dc87"]
+
+[node name="call_order" type="Node3D"]
+
+[node name="A" type="Node" parent="."]
+script = ExtResource("1_1dc87")
+
+[node name="B" type="Node" parent="A"]
+script = ExtResource("1_1dc87")
+
+[node name="C" type="Node" parent="A/B"]
+script = ExtResource("1_1dc87")
+
+[node name="D" type="Node" parent="A"]
+script = ExtResource("1_1dc87")
+
+[node name="E" type="Node" parent="A/D"]
+script = ExtResource("1_1dc87")
+
+[node name="F" type="Node" parent="A/D/E"]
+script = ExtResource("1_1dc87")
+
+[node name="G" type="Node" parent="A/D"]
+script = ExtResource("1_1dc87")
+
+[node name="H" type="Node" parent="A/D/G"]
+script = ExtResource("1_1dc87")
