@@ -34,8 +34,10 @@ Lightmapping 적용 이후 (low quality로 제작되었음)
 1. 모델 파일을 우클릭하고 New Inherited Scene을 선택합니다.
 2. MeshInstance의 Mesh를 우클릭하고 Make Unique로 유일하게 만듭니다.
 3. 게임 화면 상단의 Mesh -> Unwrap UV2 for Lightmap/AO를 사용해 UV2를 Unwrap합니다.
-4. Godot의 노드 파일인 .tscn 파일로 저장합니다.
-5. 해당 .tscn 파일로 노드를 생성해 UV2가 Unwrap된 모델을 사용할 수 있습니다.
+4. Godot의 노드 파일인 .scn 파일로 저장합니다.
+5. 해당 .scn 파일로 노드를 생성해 UV2가 Unwrap된 모델을 사용할 수 있습니다.
+
+3D 모델과 같은 많은 지오메트리 데이터가 포함된 파일은 텍스트 기반 노드 파일인 .tscn보다 바이너리 파일인 .scn으로 저장하는 것이 프로젝트 용량을 줄이고 훨씬 빠르게 로드할 수 있습니다.
 
 
 ## 참고
