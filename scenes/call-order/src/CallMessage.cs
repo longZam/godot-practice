@@ -1,3 +1,5 @@
+namespace CallOrderSample;
+
 using Godot;
 using System.Runtime.CompilerServices;
 
